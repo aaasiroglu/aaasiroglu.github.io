@@ -5,35 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arif Aşıroğlu | Spatial Data Engineer</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Helvetica+Neue:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header with Profile Image -->
-  <header id="header">
+  <!-- Hero Section -->
+  <header id="hero">
     <div class="container">
-      <img src="assets/img/profile.jpg" alt="Arif Aşıroğlu" class="profile-img">
-      <h1>Arif Aşıroğlu</h1>
-      <p>Spatial Data Engineer | GeoAI Expert | Innovator</p>
+      <div class="hero-content">
+        <img src="assets/img/profile.jpg" alt="Arif Aşıroğlu" class="hero-img">
+        <h1>Arif Aşıroğlu</h1>
+        <p>Spatial Data Engineer | GeoAI Expert | Innovator</p>
+        <a href="#about" class="btn">Explore My Work</a>
+      </div>
     </div>
   </header>
 
-  <!-- Biography Section -->
-  <section id="biography">
+  <!-- About Section -->
+  <section id="about">
     <div class="container">
       <h2>Who Am I?</h2>
       <p>
-        I am a Spatial Data Engineer passionate about GeoAI and transforming urban landscapes using data-driven solutions.  
-        I specialize in integrating geospatial data with advanced AI technologies, focusing on smart city planning and sustainability.
-        I was born in Tokat, Turkey, and my journey in education and work has taken me across key locations like Istanbul and beyond.
+        I am a Spatial Data Engineer passionate about using GeoAI and data-driven solutions to enhance urban planning and sustainability. I specialize in geospatial data, CityGML, FME, and advanced AI techniques.
       </p>
     </div>
   </section>
 
-  <!-- Life Map Section -->
-  <section id="life-map">
+  <!-- Projects Section -->
+  <section id="projects">
     <div class="container">
-      <h2>Key Locations in My Life</h2>
-      <p>Explore the places that shaped my journey, from my birthplace in Tokat to my education and career milestones.</p>
-      <div id="map"></div>
+      <h2>Featured Projects</h2>
+      <div class="project-cards">
+        <div class="project-card">
+          <img src="assets/img/tiktok-mekan-analizi.png" alt="TikTok Venue Analysis">
+          <h3>TikTok Venue Analysis</h3>
+          <p>An interactive project that uses NLP and spatial visualization to map and score popular urban venues from TikTok data.</p>
+        </div>
+        <div class="project-card">
+          <img src="assets/img/geoai-rayic.png" alt="GeoAI Real Estate Analysis">
+          <h3>GeoAI Real Estate Analysis</h3>
+          <p>Using AI and geospatial data to predict real estate prices based on location and urban features.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>If you are interested in collaboration or would like to connect, feel free to get in touch!</p>
+      <p>Email: <a href="mailto:arif@example.com">arif@example.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/arifasiroglu" target="_blank">linkedin.com/in/arifasiroglu</a></p>
     </div>
   </section>
 
@@ -44,7 +66,6 @@
     </div>
   </footer>
 
-  <!-- Script for Map -->
-  <script src="assets/js/map.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
