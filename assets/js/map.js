@@ -29,3 +29,10 @@ function initMap() {
 document.addEventListener('DOMContentLoaded', () => {
   initMap();
 });
+
+// Example JavaScript for smooth scroll effect (for 'Explore My Work' button)
+document.querySelector('.btn').addEventListener('click', function (e) {
+  e.preventDefault();
+  document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+});
+
