@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Arif Aşıroğlu</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>About Me</h1>
+    </div>
+  </header>
+
+  <section id="about-content">
+    <div class="container">
+      <h2>Arif Aşıroğlu</h2>
+      <p>
+        I am a Spatial Data Engineer with a passion for GeoAI and urban sustainability. I work with geospatial technologies to
+        create intelligent systems that make cities smarter and more sustainable. I have worked at organizations like Enerjisa and
+        İBB, and have deep expertise in using GIS, FME, and machine learning for spatial analysis.
+      </p>
+
+      <h3>Education & Work Journey</h3>
+      <p>
+        Born in Tokat, I moved to Istanbul for my studies at Istanbul Technical University. I then worked at Enerjisa, followed by
+        a role at Istanbul Metropolitan Municipality (İBB), where I focus on integrating geospatial data for urban planning and
+        sustainability.
+      </p>
+
+      <h3>Key Locations in My Life</h3>
+      <div id="map"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Arif Aşıroğlu. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/map.js"></script>
+</body>
+</html>
