@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             category: 'academic',
             title: 'Istanbul Technical University',
-            year: '2019-2024',
+            year: '2024 - Present',
             description: 'Master of Science in Geomatics Engineering',
             coordinates: [41.104499, 29.020751],
             location: 'Istanbul, Turkey'
@@ -244,5 +244,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     timelineItems.forEach(item => observer.observe(item));
+});
+
+// Mobile Menu Functionality
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link, .mobile-nav-button');
+
+function toggleMobileMenu() {
+    mobileMenu.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+}
+
+mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('active') && 
+        !mobileMenu.contains(e.target) && 
+        !mobileMenuBtn.contains(e.target)) {
+        mobileMenu.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    }
 });
   
