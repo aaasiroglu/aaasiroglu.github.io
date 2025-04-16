@@ -32,22 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
             location: 'Istanbul, Turkey'
         },
         {
-            category: 'academic',
-            title: 'Istanbul Technical University',
-            year: '2024 - Present',
-            description: 'Master of Science in Geomatics Engineering',
-            coordinates: [41.104499, 29.020751],
-            location: 'Istanbul, Turkey'
-        },
-        {
-            category: 'professional',
-            title: 'Enerjisa Energy',
-            year: 'Oct 2023 - Jun 2024',
-            description: 'Data Engineering Long Term Intern (ITalent)',
-            coordinates: [40.928677, 29.146474],
-            location: 'Istanbul, Turkey'
-        },
-        {
             category: 'professional',
             title: 'Enerjisa Energy',
             year: 'Oct 2023 - Jun 2024',
