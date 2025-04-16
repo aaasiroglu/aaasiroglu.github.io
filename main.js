@@ -16,59 +16,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Milestone data
     const milestones = [
         {
-            category: 'academic',
-            title: 'Ömer Gültekin Yavuz Selim Primary School',
-            year: '2007-2011',
-            description: 'Primary Education',
-            coordinates: [41.019350, 28.585900],
-            location: 'Istanbul, Turkey'
-        },
-        {
-            category: 'academic',
-            title: 'Gaziosmanpaşa Middle School',
-            year: '2011-2015',
-            description: 'Middle School Education',
-            coordinates: [40.310344, 36.552147],
-            location: 'Istanbul, Turkey'
-        },
-        {
-            category: 'academic',
-            title: 'Beşir Balcıoğlu Anatolian High School',
-            year: '2015-2019',
-            description: 'High School Education',
-            coordinates: [40.986272, 28.667364],
+            category: 'professional',
+            title: 'IMM Directorate of GIS',
+            year: 'Nov 2024 - Present',
+            description: 'GIS Specialist',
+            coordinates: [41.037938, 28.972503],
             location: 'Istanbul, Turkey'
         },
         {
             category: 'academic',
             title: 'Istanbul Technical University',
-            year: '2019-2024',
-            description: 'Bachelor of Science in Geomatics Engineering',
-            coordinates: [41.104870, 29.020563],
-            location: 'Istanbul, Turkey'
-        },
-        {
-            category: 'professional',
-            title: 'Entalpi',
-            year: 'Dec 2021 - Jul 2023',
-            description: 'Part-Time Reporting Analyst (Power BI)',
-            coordinates: [41.0816, 29.0121],
-            location: 'Istanbul, Turkey'
-        },
-        {
-            category: 'professional',
-            title: 'Ministry of Defense General Directorate of Mapping',
-            year: 'Jul 2023 - Aug 2023',
-            description: 'Geomatics Engineer Intern',
-            coordinates: [39.9334, 32.8597],
-            location: 'Ankara, Turkey'
-        },
-        {
-            category: 'professional',
-            title: 'Enerjisa Energy',
-            year: 'Oct 2023 - Jun 2024',
-            description: 'Data Engineering Long Term Intern (ITalent)',
-            coordinates: [40.928677, 29.146474],
+            year: '2024 - Present',
+            description: 'Master of Science in Geomatics Engineering',
+            coordinates: [41.104499, 29.020751],
             location: 'Istanbul, Turkey'
         },
         {
@@ -81,10 +41,66 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             category: 'professional',
-            title: 'IMM Directorate of GIS',
-            year: 'Nov 2024 - Present',
-            description: 'GIS Specialist',
-            coordinates: [41.037938, 28.972503],
+            title: 'Enerjisa Energy',
+            year: 'Oct 2023 - Jun 2024',
+            description: 'Data Engineering Long Term Intern (ITalent)',
+            coordinates: [40.928677, 29.146474],
+            location: 'Istanbul, Turkey'
+        },
+        {
+            category: 'professional',
+            title: 'Enerjisa Energy',
+            year: 'Oct 2023 - Jun 2024',
+            description: 'Data Engineering Long Term Intern (ITalent)',
+            coordinates: [40.928677, 29.146474],
+            location: 'Istanbul, Turkey'
+        },
+        {
+            category: 'professional',
+            title: 'Ministry of Defense General Directorate of Mapping',
+            year: 'Jul 2023 - Aug 2023',
+            description: 'Geomatics Engineer Intern',
+            coordinates: [39.9334, 32.8597],
+            location: 'Ankara, Turkey'
+        },
+        {
+            category: 'professional',
+            title: 'Entalpi',
+            year: 'Dec 2021 - Jul 2023',
+            description: 'Part-Time Reporting Analyst (Power BI)',
+            coordinates: [41.0816, 29.0121],
+            location: 'Istanbul, Turkey'
+        },
+        {
+            category: 'academic',
+            title: 'Istanbul Technical University',
+            year: '2019-2024',
+            description: 'Bachelor of Science in Geomatics Engineering',
+            coordinates: [41.104870, 29.020563],
+            location: 'Istanbul, Turkey'
+        },
+        {
+            category: 'academic',
+            title: 'Beşir Balcıoğlu Anatolian High School',
+            year: '2015-2019',
+            description: 'High School Education',
+            coordinates: [40.986272, 28.667364],
+            location: 'Istanbul, Turkey'
+        },
+        {
+            category: 'academic',
+            title: 'Gaziosmanpaşa Middle School',
+            year: '2011-2015',
+            description: 'Middle School Education',
+            coordinates: [40.310344, 36.552147],
+            location: 'Istanbul, Turkey'
+        },
+        {
+            category: 'academic',
+            title: 'Ömer Gültekin Yavuz Selim Primary School',
+            year: '2007-2011',
+            description: 'Primary Education',
+            coordinates: [41.019350, 28.585900],
             location: 'Istanbul, Turkey'
         }
     ];
