@@ -1,0 +1,40 @@
+{
+  "profile": {
+    "name": "Arif Aşıroğlu",
+    "github": "aaasiroglu",
+    "medium": "abdurrahimarifasiroglu",
+    "linkedin": "https://www.linkedin.com/in/asiroglu"
+  },
+  "linkedinPosts": [
+    {
+      "url": "https://tr.linkedin.com/posts/asiroglu_during-the-two-days-program-of-the-geoexperts-activity-7373974352054104064-J88x",
+      "caption": "GeoExperts etkinliğinden kısa bir kesit."
+    },{
+      "url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftr.linkedin.com%2Fposts%2Fasiroglu_microsoftaitour-microsoftaitouristanbul-activity-7254492611426590720-Cy7F&psig=AOvVaw1PGToVof-NxdgU7EjKWjyD&ust=1760774731092000&source=images&cd=vfe&opi=89978449&ved=0CBgQjhxqFwoTCKC8jp_jqpADFQAAAAAdAAAAABAE",
+      "caption": "Microsoft AI Tour İstanbul etkinliğinde yapay zeka ve geleceğe dair keyifli bir deneyim."
+    },
+    {
+      "url": "https://www.linkedin.com/posts/asiroglu_sasinnovateontour-generativeai-dataanalytics-activity-7199059870011035648-fqOW/?originalSubdomain=tr",
+      "caption": "Yapay zeka ve veri analitiğinin geleceği hakkında unutulmaz bir deneyim."
+    }
+
+  ],
+  "github": {
+    "show": true,
+    "maxRepos": 6,
+    "pinned": [
+      
+    ],
+    "readme": {
+      "showExcerpt": true,
+      "maxChars": 180
+    }
+  },
+  "medium": {
+    "show": true,
+    "maxPosts": 6
+  },
+  "ui": {
+    "minimal": true
+  }
+}

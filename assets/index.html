@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arif Aşıroğlu | Geomatics Engineer & GIS Specialist</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+
+  <!-- Fixed Navigation Bar -->
+  <nav id="navbar">
+    <div class="nav-content">
+      <a href="#header" class="nav-logo">Arif Aşıroğlu</a>
+      <div class="nav-center">
+        <div class="nav-section-title"></div>
+      </div>
+      <div class="nav-links">
+        <a href="#header" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#categories" class="nav-link">Journey</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#gallery" class="nav-link">AI Gallery</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="https://www.linkedin.com/in/asiroglu" target="_blank" class="nav-button">
+          <i class="fab fa-linkedin"></i>
+          <span>Connect on LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header with Animated Background -->
+  <header id="header" data-nav-title="Home">
+    <div class="background-video">
+      <video autoplay loop muted playsinline>
+        <source src="assets/header-bg.mov" type="video/quicktime">
+      </video>
+      <div class="overlay"></div>
+    </div>
+    <div class="header-content">
+      <div class="profile-section">
+        <div class="profile-image">
+          <img src="assets\thumbnail_IMG_2233.jpg" alt="Arif Aşıroğlu">
+        </div>
+        <div class="profile-text">
+          <h1>Arif Aşıroğlu</h1>
+          <p>Geo-Informatics Engineer & AI Enthusiast</p>
+          <div class="header-buttons">
+            <a href="#categories" class="btn">Explore My Journey</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about" class="about-section" data-nav-title="About Me">
+    <div class="background-pattern about-pattern"></div>
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <div class="about-card">
+            <i class="fas fa-database card-icon"></i>
+            <p>I work at the intersection of data modeling, analysis, and visualization, with hands-on experience across both public and private sector projects. Using tools like SQL and Power BI, I've delivered impactful insights that support clear and data-driven decisions.</p>
+          </div>
+
+          <div class="about-card">
+            <i class="fas fa-city card-icon"></i>
+            <p>I've also worked extensively with 3D city data, GML formats, and data transformation using FME—building a strong technical foundation in structured data workflows and spatial thinking.</p>
+          </div>
+
+          <div class="about-card">
+            <i class="fas fa-brain card-icon"></i>
+            <p>My current focus is expanding my expertise in data engineering and AI-supported systems. I'm confident in SQL and database processes, and I actively use Python for data analysis and interpretation.</p>
+          </div>
+
+          <div class="about-card">
+            <i class="fas fa-code-branch card-icon"></i>
+            <p>My goal is to create efficient, meaningful solutions by combining real-world data experience with emerging technologies—and to keep growing in the evolving world of data.</p>
+          </div>
+        </div>
+
+        <div class="skills-container">
+          <h3>Technical Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <i class="fas fa-database"></i>
+              <span>SQL & Databases</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-chart-bar"></i>
+              <span>Power BI</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-map-marked-alt"></i>
+              <span>GIS</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-cube"></i>
+              <span>3D Modeling</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-exchange-alt"></i>
+              <span>FME</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-satellite"></i>
+              <span>Remote Sensing</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-eye"></i>
+              <span>Computer Vision</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-project-diagram"></i>
+              <span>Data Engineering</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-network-wired"></i>
+              <span>Data Integration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey Section -->
+  <section id="categories" data-nav-title="Journey">
+    <div class="background-video">
+      <video autoplay loop muted playsinline>
+        <source src="assets/journey-bg.mp4" type="video/mp4">
+      </video>
+      <div class="overlay"></div>
+    </div>
+    <div class="container">
+      <h2>My Journey</h2>
+      
+      <div class="category-buttons">
+        <button class="category-btn active" data-category="all">All</button>
+        <button class="category-btn" data-category="professional">Professional</button>
+        <button class="category-btn" data-category="academic">Academic</button>
+      </div>
+      
+      <div class="journey-container">
+        <div class="timeline-container">
+          <div class="timeline"></div>
+        </div>
+        <div class="map-container">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" data-nav-title="Projects">
+    <div class="background-video">
+      <video autoplay loop muted playsinline>
+        <source src="assets/projects-bg.mp4" type="video/mp4">
+      </video>
+      <div class="overlay"></div>
+    </div>
+    <div class="container">
+      <h2>Research & Projects</h2>
+      <div class="project-gallery">
+        <div class="project-card">
+          <img src="assets/img/ai-artwork1.jpg" alt="AI Research Project">
+          <div class="project-content">
+            <h3>Spatial AI Analysis</h3>
+            <p>Research on integrating AI with geospatial data analysis for urban planning applications</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="assets/img/ai-artwork2.jpg" alt="GIS Project">
+          <div class="project-content">
+            <h3>Smart City GIS</h3>
+            <p>Urban planning and analysis using advanced GIS techniques for sustainable development</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="assets/img/ai-artwork3.jpg" alt="Data Engineering Project">
+          <div class="project-content">
+            <h3>Data Engineering Pipeline</h3>
+            <p>Development of automated data processing pipelines for geospatial data integration</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Art Gallery Section -->
+  <section id="gallery" class="gallery-section" data-nav-title="AI Gallery">
+    <div class="background-pattern gallery-pattern"></div>
+    <div class="container">
+      <h2>AI Art Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <video autoplay loop muted playsinline class="gallery-video">
+            <source src="assets/20250413_0033_Robot Mirror Reflection_simple_compose_01jrnyqtvffktbbezexr1nekpz.mp4" type="video/mp4">
+          </video>
+          <div class="gallery-overlay">
+            <h3>Digital Dreams</h3>
+            <p>Original Content by Arif Aşıroğlu</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <video autoplay loop muted playsinline class="gallery-video">
+            <source src="assets/20250413_0036_Turkish Freedom Ride_simple_compose_01jrnyy7t1ers90wg59wa5byk0.mp4" type="video/mp4">
+          </video>
+          <div class="gallery-overlay">
+            <h3>Neural Canvas</h3>
+            <p>Original Content by Arif Aşıroğlu</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <video autoplay loop muted playsinline class="gallery-video">
+            <source src="assets/20250413_0018_Mesmerizing Color Swirls_simple_compose_01jrnxwxfjeajt7tzm73dzkdfr.mp4" type="video/mp4">
+          </video>
+          <div class="gallery-overlay">
+            <h3>Synthetic Vision</h3>
+            <p>Original Content by Arif Aşıroğlu</p>
+          </div>
+        </div>
+
+        <!-- Static Images -->
+        <div class="gallery-item">
+          <img src="assets\2B83E94E-7BAF-462A-B41A-90201E854E75.PNG" alt="AI Generated Artwork 1" class="gallery-image">
+          <div class="gallery-overlay">
+            <h3>Urban Patterns</h3>
+            <p>AI Generated Art by Arif Aşıroğlu</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets\572595DD-9BAA-42B3-8DAF-33C5338F3A5F.PNG" alt="AI Generated Artwork 2" class="gallery-image">
+          <div class="gallery-overlay">
+            <h3>Data Landscapes</h3>
+            <p>AI Generated Art by Arif Aşıroğlu</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets\3F31831C-73DA-4C44-9183-ECB17B64E755.PNG" alt="AI Generated Artwork 3" class="gallery-image">
+          <div class="gallery-overlay">
+            <h3>Digital Abstractions</h3>
+            <p>AI Generated Art by Arif Aşıroğlu</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section" data-nav-title="Contact">
+    <div class="background-video">
+      <video autoplay loop muted playsinline>
+        <source src="assets/contact-bg.mp4" type="video/mp4">
+      </video>
+      <div class="overlay contact-overlay"></div>
+    </div>
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:aaasiroglu@outlook.com">aaasiroglu@outlook.com</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+905307349133">+90 530 734 9133</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Istanbul, Turkey</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/aaasiroglu" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://tr.linkedin.com/in/asiroglu" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/aaasiroglu" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/aaasiroglu" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2024 Arif Aşıroğlu. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
