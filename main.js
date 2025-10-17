@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
     addReveal(document.querySelector('#opensource .container'));
     addReveal(document.querySelector('#about .container'));
     addReveal(document.querySelector('#contact .container'));
-    addReveal(document.querySelector('#gallery .container'));
 
     // Heartbeat dots layer setup
     const heartbeatLayer = document.getElementById('heartbeat-layer');
@@ -576,18 +575,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })();
 
-    // ---------- Sliders controls (Gallery & Contact) ----------
+    // ---------- Sliders controls (Contact) ----------
     function sliderScrollBy(id, delta) {
         const el = document.getElementById(id);
         if (!el) return;
         el.scrollBy({ left: delta, behavior: 'smooth' });
-    }
-    const galleryPrev = document.getElementById('gallery-prev');
-    const galleryNext = document.getElementById('gallery-next');
-    if (galleryPrev && galleryNext) {
-        const amount = 420; // roughly one card
-        galleryPrev.addEventListener('click', () => { sliderScrollBy('gallery-slider', -amount); setHeartbeatSpeed(1.6); });
-        galleryNext.addEventListener('click', () => { sliderScrollBy('gallery-slider', amount); setHeartbeatSpeed(1.6); });
     }
     const contactPrev = document.getElementById('contact-prev');
     const contactNext = document.getElementById('contact-next');
@@ -626,4 +618,3 @@ document.addEventListener('click', (e) => {
         document.body.classList.remove('menu-open');
     }
 });
-  
