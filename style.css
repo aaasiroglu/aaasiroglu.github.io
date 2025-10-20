@@ -956,6 +956,36 @@ body.minimal .heartbeat-dot { filter: none; opacity: 0.7; }
     will-change: opacity, transform;
   }
   
+  /* Disable heavy animations on mobile for CV simplicity */
+  .background-pattern {
+    animation: none !important;
+    display: none;
+  }
+  
+  .heartbeat-dot {
+    animation: none !important;
+    display: none;
+  }
+  
+  .background-video {
+    display: none !important;
+  }
+  
+  /* Simplify transitions for CV readability */
+  * {
+    animation-duration: 0.2s !important;
+    transition-duration: 0.2s !important;
+  }
+  
+  /* Remove complex hover effects */
+  .btn::after,
+  .contact-card::before,
+  .mobile-nav-link::before,
+  .mobile-nav-button::before,
+  .social-link::before {
+    display: none;
+  }
+  
   /* Reduce complex animations on lower-end devices */
   @media (max-resolution: 150dpi) {
     .background-pattern {
@@ -980,6 +1010,22 @@ body.minimal .heartbeat-dot { filter: none; opacity: 0.7; }
     .background-video video {
       will-change: auto;
     }
+  }
+  
+  /* CV-specific performance optimizations */
+  .timeline-item,
+  .about-card,
+  .skill-item,
+  .contact-card {
+    transform: none !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+  
+  .timeline-item:hover,
+  .about-card:hover,
+  .skill-item:hover {
+    transform: none !important;
+    background: rgba(255, 255, 255, 0.08);
   }
 }
 
@@ -1008,101 +1054,213 @@ body.minimal .heartbeat-dot { filter: none; opacity: 0.7; }
 }
 
 @media (max-width: 768px) {
+  /* General mobile CV optimizations */
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  /* Simplified header for CV style */
   .header-content h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
   }
   
   .header-content p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
   }
   
+  /* Section headers CV style */
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
   }
   
-  .profile-section {
-    flex-direction: column;
-    text-align: center;
+  .content-section h2 {
+    text-align: left;
+    padding-left: 1rem;
   }
   
-  .profile-image {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 2rem;
+  .content-section h2::after {
+    left: 1rem;
+    transform: none;
+    width: 50px;
   }
   
-  .profile-text {
-    text-align: center;
-  }
-  
-  .about-text {
-    grid-template-columns: 1fr;
-  }
-  
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .project-gallery {
-    grid-template-columns: 1fr;
-  }
-  
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .contact-content {
-    flex-direction: column;
-  }
-  
-  .contact-info, .social-links {
-    width: 100%;
-  }
-
-  .header-buttons {
-    flex-direction: column;
-    gap: 15px;
-    padding: 0 20px;
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
-
+  /* Profile section CV layout */
   .profile-section {
     flex-direction: column;
     text-align: center;
     gap: 2rem;
+    padding: 1rem;
   }
-
+  
   .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
   }
-
+  
   .profile-text {
     text-align: center;
   }
-
+  
   .profile-text h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
   }
-
+  
   .profile-text p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.4;
   }
-
+  
+  /* CV-style content sections */
+  .content-section {
+    padding: 2rem 1rem;
+  }
+  
+  /* About section CV format */
+  .about-text {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .about-card {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Skills grid CV format */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .skill-item {
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+  }
+  
+  /* Contact section CV format */
+  .contact-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .contact-info,
+  .social-links {
+    width: 100%;
+  }
+  
+  /* Button styling for CV */
+  .header-buttons {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 1rem;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Remove complex visual effects for CV simplicity */
   .background-video {
-    display: block;
+    display: none;
   }
   
   .background-video video {
-    object-position: center;
+    display: none;
   }
   
+  .background-pattern {
+    display: none;
+  }
+  
+  #heartbeat-layer {
+    display: none;
+  }
+  
+  /* Simple backgrounds for CV style */
   #header {
-    background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.7));
+    background: linear-gradient(135deg, rgba(10,10,10,0.95), rgba(26,26,26,0.95));
+    min-height: 70vh;
+  }
+  
+  .content-section {
+    background: linear-gradient(135deg, #0a0a0a, #000000);
+  }
+  
+  /* Enhanced touch feedback */
+  .btn:active,
+  .mobile-nav-link:active,
+  .contact-card:active {
+    transform: scale(0.98);
+    opacity: 0.8;
+  }
+  
+  .skill-item:active {
+    transform: scale(0.95);
+  }
+  
+  .about-card:active {
+    transform: scale(0.98);
+  }
+  
+  /* Ensure proper spacing between sections */
+  section {
+    margin-bottom: 1rem;
+  }
+  
+  /* Timeline section mobile CV format */
+  .timeline-container {
+    padding: 1rem;
+  }
+  
+  .timeline-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-left: 3px solid var(--accent-color);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+  }
+  
+  /* Cards styling for CV readability */
+  .card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  
+  .card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+  }
+  
+  /* Footer CV style */
+  footer {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
   }
 }
 
@@ -1150,6 +1308,36 @@ body.minimal .heartbeat-dot { filter: none; opacity: 0.7; }
   font-size: 0.9rem;
 }
 
+/* iPhone safe area optimizations */
+@supports (padding: max(0px)) {
+  .nav-content {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+  
+  .content-section {
+    padding-left: max(var(--mobile-padding), env(safe-area-inset-left));
+    padding-right: max(var(--mobile-padding), env(safe-area-inset-right));
+  }
+  
+  .header-content {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-top: max(2rem, env(safe-area-inset-top));
+  }
+  
+  .mobile-menu {
+    padding-top: max(1.5rem, env(safe-area-inset-top));
+    padding-left: max(1.5rem, env(safe-area-inset-left));
+    padding-right: max(1.5rem, env(safe-area-inset-right));
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  }
+  
+  footer {
+    padding-bottom: max(2rem, env(safe-area-inset-bottom));
+  }
+}
+
 /* Navigation Bar */
 #navbar {
     position: fixed;
@@ -1163,6 +1351,23 @@ body.minimal .heartbeat-dot { filter: none; opacity: 0.7; }
     transition: all 0.3s ease;
     height: 44px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* iPhone specific navbar adjustments */
+@media screen and (max-width: 414px) {
+  #navbar {
+    height: 50px;
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .nav-content {
+    height: 50px;
+  }
+  
+  .mobile-menu {
+    top: calc(50px + env(safe-area-inset-top));
+    height: calc(100vh - 50px - env(safe-area-inset-top));
+  }
 }
 
 .nav-content {
@@ -2504,6 +2709,334 @@ body.menu-open::after {
 @media (max-width: 768px) {
   .mobile-menu {
     height: calc(var(--vh, 1vh) * 100 - var(--mobile-nav-height));
+  }
+}
+
+/* iPhone 13 and similar devices (390px width) specific optimizations */
+@media screen and (max-width: 414px) and (min-width: 375px) {
+  :root {
+    --mobile-padding: 1rem;
+    --section-spacing: 1.5rem;
+    --card-padding: 0.75rem;
+  }
+  
+  /* CV-style compact header */
+  #header {
+    min-height: 50vh;
+    padding: 1.5rem 0;
+  }
+  
+  .header-content {
+    padding: 0.75rem;
+  }
+  
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 0 0.75rem;
+  }
+  
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  
+  .profile-text h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.1;
+  }
+  
+  .profile-text p {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+  
+  .header-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  
+  /* CV-style section headers */
+  .content-section {
+    padding: var(--section-spacing) var(--mobile-padding);
+  }
+  
+  .content-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    text-align: left;
+    padding-left: 0;
+  }
+  
+  .content-section h2::after {
+    left: 0;
+    transform: none;
+    width: 40px;
+    height: 3px;
+  }
+  
+  /* Journey section CV format - compact timeline */
+  .journey-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .timeline-container {
+    height: auto;
+    max-height: 400px;
+    order: 2;
+    overflow-y: auto;
+  }
+  
+  .map-container {
+    height: 200px;
+    order: 1;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Timeline CV-style ultra compact view */
+  .timeline-item {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-left: 2px solid var(--accent-color);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 6px;
+  }
+  
+  .timeline-item .year {
+    font-size: 0.7rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+  
+  .timeline-item .title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    line-height: 1.2;
+  }
+  
+  .timeline-item .description {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.3;
+  }
+  
+  /* About section CV format - more compact */
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .about-text {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .about-card {
+    padding: var(--card-padding);
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-icon {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .about-card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .about-card p {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+  
+  /* Skills section ultra compact CV format */
+  .skills-container {
+    padding: var(--card-padding);
+  }
+  
+  .skills-container h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    text-align: left;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+  }
+  
+  .skill-item {
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+  }
+  
+  .skill-item span {
+    font-size: 0.7rem;
+  }
+  
+  .skill-item i {
+    font-size: 0.8rem;
+  }
+  
+  /* Contact section CV format - horizontal cards */
+  .contact-content {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .contact-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow: visible;
+  }
+  
+  .contact-card {
+    padding: 0.75rem;
+    margin: 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: auto;
+  }
+  
+  .contact-card i {
+    font-size: 1rem;
+    color: var(--accent-color);
+    min-width: 24px;
+  }
+  
+  .contact-card h3 {
+    font-size: 0.8rem;
+    margin: 0 0 0.1rem 0;
+    color: var(--text-secondary);
+  }
+  
+  .contact-card a,
+  .contact-card span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .slider-controls {
+    display: none;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+  
+  .social-link {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+  
+  /* Cards and content styling for better CV readability */
+  .card {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-radius: 6px;
+  }
+  
+  .card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.2;
+  }
+  
+  .card p {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+  
+  /* Hide complex backgrounds on mobile for CV look */
+  .background-video {
+    display: none !important;
+  }
+  
+  .background-pattern,
+  #heartbeat-layer {
+    display: none !important;
+  }
+  
+  /* Simple gradient backgrounds for CV style */
+  #header {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  }
+  
+  .content-section {
+    background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
+  }
+  
+  /* Navigation adjustments */
+  .nav-content {
+    padding: 0 0.75rem;
+  }
+  
+  .nav-logo {
+    font-size: 13px;
+  }
+  
+  .mobile-nav-link {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+  
+  /* Footer compact */
+  footer {
+    padding: 1rem 0.75rem;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+  }
+  
+  /* Lists and content formatting for CV style */
+  #github-list,
+  #medium-list,
+  #linkedin-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  /* Ensure content sections have proper spacing */
+  section:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  
+  /* Optimize typography for CV readability */
+  .section-lead {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
   }
 }
   
