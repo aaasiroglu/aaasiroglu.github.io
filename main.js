@@ -825,7 +825,89 @@ class MobilePerformanceOptimizer {
 document.addEventListener('DOMContentLoaded', () => {
     new TouchGestureHandler();
     new MobilePerformanceOptimizer();
+    
+    // Initialize horizontal scroll for content sections
+    initializeHorizontalScroll();
 });
+
+// Horizontal scroll initialization for mobile content sections
+function initializeHorizontalScroll() {
+    const scrollContainers = document.querySelectorAll('.linkedin-grid, .card-grid, #linkedin-list, #medium-list, #github-list');
+    
+    scrollContainers.forEach(container => {
+        if (!container) return;
+        
+        // Add scroll indicators
+        addScrollIndicators(container);
+        
+        // Add touch scroll enhancement
+        let isScrolling = false;
+        
+        container.addEventListener('scroll', () => {
+            if (!isScrolling) {
+                isScrolling = true;
+                updateScrollIndicators(container);
+                
+                setTimeout(() => {
+                    isScrolling = false;
+                }, 100);
+            }
+        }, { passive: true });
+        
+        // Initial scroll indicator state
+        updateScrollIndicators(container);
+    });
+}
+
+function addScrollIndicators(container) {
+    // Remove existing indicators
+    const existingIndicator = container.parentElement.querySelector('.scroll-indicator');
+    if (existingIndicator) {
+        existingIndicator.remove();
+    }
+    
+    // Add scroll indicator
+    const indicator = document.createElement('div');
+    indicator.className = 'scroll-indicator';
+    indicator.innerHTML = '→';
+    indicator.style.cssText = `
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 149, 0, 0.9);
+        color: #000;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        font-weight: bold;
+        pointer-events: none;
+        z-index: 10;
+        transition: opacity 0.3s ease;
+    `;
+    
+    // Position the parent relatively
+    container.parentElement.style.position = 'relative';
+    container.parentElement.appendChild(indicator);
+}
+
+function updateScrollIndicators(container) {
+    const indicator = container.parentElement.querySelector('.scroll-indicator');
+    if (!indicator) return;
+    
+    const isScrollable = container.scrollWidth > container.clientWidth;
+    const isAtEnd = Math.abs(container.scrollWidth - container.clientWidth - container.scrollLeft) < 5;
+    
+    if (!isScrollable || isAtEnd) {
+        indicator.style.opacity = '0';
+    } else {
+        indicator.style.opacity = '1';
+    }
+}
 
 // Smooth scrolling enhancement for mobile
 function enhanceSmoothScrolling() {
