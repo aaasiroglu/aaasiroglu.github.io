@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="format-detection" content="telephone=no">
   <title>Arif Aşıroğlu | AI Specialist & Engineer </title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -12,6 +17,8 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body>
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Fixed Navigation Bar -->
   <nav id="navbar">
@@ -20,8 +27,9 @@
       <div class="nav-center">
         <div class="nav-section-title"></div>
       </div>
-      <button class="mobile-menu-btn">
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
         <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
       </button>
       <div class="nav-links">
         <a href="#header" class="nav-link">Home</a>
@@ -86,6 +94,8 @@
   <!-- Scroll Progress Bar -->
   <div id="progress-bar" aria-hidden="true"></div>
 
+  <!-- Main Content -->
+  <main id="main-content">
   <!-- Journey Section -->
   <section id="categories" data-nav-title="Journey">
     <div class="background-video">
@@ -288,6 +298,7 @@
       </div>
     </div>
   </section>
+  </main>
 
   <!-- Footer -->
   <footer>
