@@ -408,7 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const username = CONFIG.profile?.github || DEFAULTS.profile.github;
     const perPage = CONFIG.github?.maxRepos || 6;
     const pinned = Array.isArray(CONFIG.github?.pinned) ? CONFIG.github.pinned : [];
-    const url = `https://api.github.com/users/${encodeURIComponent(username)}/repos?sort=updated&per_page=${perPage}`;
+    const url = `https://api.github.com/users/${encodeURIComponent(username)}/repos?sort=updated&per_page=${Math.max(perPage, pinned.length, 30)}`;
 
         fetch(url, {
             headers: { 'Accept': 'application/vnd.github+json' }
